@@ -1,0 +1,17 @@
+{
+  "name": "L&K HiringsPro",
+  "short_name": "HiringsPro",
+  "description": "L&K HiringsPro connects businesses with workforce and recruitment solutions while helping candidates discover new opportunities.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#04060a",
+  "theme_color": "#04060a",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

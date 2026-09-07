@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #111827;
+  --lak-red: #E31837;
+  --lak-red-hover: #c4122d;
+  --lak-border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  color: #111827;
+  color-scheme: light;
+}
+
+body {
+  background-color: #ffffff;
+  color: #111827;
+  overflow-x: hidden;
+  font-family: 'Inter', var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Clash Display', var(--font-display), 'Inter', sans-serif;
+}
+
+::selection {
+  background: rgba(227, 24, 55, 0.15);
+  color: #111827;
+}
+
+/* Custom refined scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E31837;
+}
+
+/* Subtle background grid pattern */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(227, 24, 55, 0.12) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Luxury Editorial Card */
+.glass-card, .lak-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover, .lak-card-hover:hover {
+  border-color: rgba(227, 24, 55, 0.4);
+  box-shadow: 0 16px 36px -8px rgba(227, 24, 55, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Editorial Dividers */
+.lak-red-divider {
+  height: 2px;
+  background: #E31837;
+}
+
+.lak-border-hairline {
+  border: 1px solid #e5e7eb;
+}
+
+/* Hide scrollbar for clean horizontal reel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Refined Corporate Button System matching Lords & Kings parent site */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.875rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: #E31837;
+  border: 1px solid #E31837;
+  transition: all 0.25s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #c4122d;
+  border-color: #c4122d;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(227, 24, 55, 0.25);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.875rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #111827;
+  background-color: #ffffff;
+  border: 1px solid #111827;
+  transition: all 0.25s ease-in-out;
+}
+
+.btn-secondary:hover {
+  color: #ffffff;
+  background-color: #111827;
+  border-color: #111827;
+  transform: translateY(-1px);
+}
+
+.btn-secondary:active {
+  transform: scale(0.98);
+}
