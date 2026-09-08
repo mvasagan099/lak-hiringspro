@@ -1061,6 +1061,15 @@ video {
 .animate-ping{
   animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
+@keyframes spin{
+
+  to{
+    transform: rotate(360deg);
+  }
+}
+.animate-spin{
+  animation: spin 1s linear infinite;
+}
 .cursor-grab{
   cursor: grab;
 }
@@ -2463,6 +2472,14 @@ strong:not(.font-mono) {
 
 .active\:cursor-grabbing:active{
   cursor: grabbing;
+}
+
+.disabled\:cursor-not-allowed:disabled{
+  cursor: not-allowed;
+}
+
+.disabled\:opacity-75:disabled{
+  opacity: 0.75;
 }
 
 .group:hover .group-hover\:-translate-y-0\.5{

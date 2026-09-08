@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, CheckCircle2, Send, MessageSquare, Building2, User } from 'lucide-react';
+import { X, CheckCircle2, Send, MessageSquare, Building2, User, Loader2 } from 'lucide-react';
 import { CONTACT_INFO } from '@/lib/constants';
 
 interface InquiryModalProps {
@@ -20,6 +20,7 @@ export default function InquiryModal({
 }: InquiryModalProps) {
   const [mode, setMode] = useState<'employer' | 'candidate'>(initialMode);
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Form states
   const [formData, setFormData] = useState({
@@ -51,9 +52,23 @@ export default function InquiryModal({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    try {
+      await fetch('/api/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ mode, ...formData }),
+      });
+      setSubmitted(true);
+    } catch (err) {
+      console.error('Failed to submit inquiry:', err);
+      // Still show submitted state so user can proceed to WhatsApp
+      setSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const resetForm = () => {
@@ -291,10 +306,20 @@ export default function InquiryModal({
                   <div className="pt-3">
                     <button
                       type="submit"
-                      className="w-full py-4 bg-[#E31837] hover:bg-[#c4122d] text-white text-xs font-semibold tracking-[0.15em] uppercase transition-all shadow-sm active:scale-98 flex items-center justify-center gap-2"
+                      disabled={isSubmitting}
+                      className="w-full py-4 bg-[#E31837] hover:bg-[#c4122d] disabled:opacity-75 disabled:cursor-not-allowed text-white text-xs font-semibold tracking-[0.15em] uppercase transition-all shadow-sm active:scale-98 flex items-center justify-center gap-2"
                     >
-                      <Send className="w-4 h-4" />
-                      <span>{mode === 'employer' ? 'Submit Enterprise Request' : 'Submit Candidate Registration'}</span>
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          <span>Submitting...</span>
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-4 h-4" />
+                          <span>{mode === 'employer' ? 'Submit Enterprise Request' : 'Submit Candidate Registration'}</span>
+                        </>
+                      )}
                     </button>
                   </div>
 
