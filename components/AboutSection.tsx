@@ -40,7 +40,7 @@ export default function AboutSection() {
                 A LORDS &amp; KINGS ECOSYSTEM BRAND
               </div>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
-                Operating within the diversified framework of the Lords &amp; Kings Group, L&amp;K HiringsPro brings systematic management discipline and unwavering delivery accountability to enterprise workforce operations.
+                Operating within the diversified framework of the Lords &amp; Kings Group, Lords &amp; Kings Group Manpower Solutions brings systematic management discipline and unwavering delivery accountability to enterprise workforce operations.
               </p>
             </motion.div>
           </div>
@@ -54,7 +54,7 @@ export default function AboutSection() {
             className="lg:col-span-6 space-y-6 text-base sm:text-lg text-gray-700 leading-relaxed font-normal pt-2"
           >
             <p>
-              L&amp;K HiringsPro was created to address a structural business reality: organizations thrive or falter based on the dependability of the people operating their day-to-day workflows.
+              Lords &amp; Kings Group Manpower Solutions was created to address a structural business reality: organizations thrive or falter based on the dependability of the people operating their day-to-day workflows.
             </p>
             <p className="text-gray-600">
               We view recruitment not as transactional seat-filling, but as an operational partnership. By developing deep functional insight across retail, manufacturing, logistics, and technical operations, we ensure candidate capability aligns precisely with client operational tempo.

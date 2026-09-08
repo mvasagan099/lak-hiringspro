@@ -33,7 +33,7 @@ export default function IndustriesHero() {
           className="flex items-center gap-3 text-xs font-mono tracking-[0.25em] text-[#E31837] font-semibold uppercase mb-6"
         >
           <span className="w-8 h-[2px] bg-[#E31837]" />
-          <span>L&amp;K HIRINGSPRO &bull; INDUSTRY DIVISIONS</span>
+          <span>LORDS &amp; KINGS GROUP MANPOWER SOLUTIONS &bull; INDUSTRY DIVISIONS</span>
           <span className="w-8 h-[2px] bg-[#E31837]" />
         </motion.div>
 

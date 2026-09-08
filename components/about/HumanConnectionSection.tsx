@@ -70,9 +70,9 @@ export default function HumanConnectionSection() {
               viewport={{ once: true }}
               className="px-6 py-3 border border-red-200 bg-red-50 text-[#E31837] flex items-center gap-2.5 my-2 shadow-sm"
             >
-              <HeartHandshake className="w-4 h-4" />
-              <span className="text-xs font-mono tracking-[0.2em] uppercase font-bold">
-                L&amp;K HIRINGSPRO &bull; THE BRIDGE
+              <HeartHandshake className="w-4 h-4 shrink-0" />
+              <span className="text-xs font-mono tracking-[0.16em] uppercase font-bold">
+                LORDS &amp; KINGS GROUP MANPOWER SOLUTIONS &bull; THE BRIDGE
               </span>
             </motion.div>
             <div className="w-[2px] h-10 bg-[#E31837]" />

@@ -47,7 +47,7 @@ export default function FinalCtaSection({ onOpenHireModal, onOpenContactModal }:
           transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
           className="mt-6 text-base sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal"
         >
-          Connect with L&amp;K HiringsPro today. Share your enterprise requirement or submit your candidate credentials to access verified placements.
+          Connect with Lords &amp; Kings Group Manpower Solutions today. Share your enterprise requirement or submit your candidate credentials to access verified placements.
         </motion.p>
 
         {/* Buttons */}
@@ -83,7 +83,7 @@ export default function FinalCtaSection({ onOpenHireModal, onOpenContactModal }:
           transition={{ duration: 0.8, delay: 0.45 }}
           className="mt-14 pt-8 border-t border-gray-200 flex flex-wrap items-center justify-center gap-8 text-xs font-mono text-gray-500"
         >
-          <span>EMAIL: <a href="mailto:contact@lordsandkings.co" className="text-gray-900 hover:text-[#E31837] font-semibold">contact@lordsandkings.co</a></span>
+          <span>EMAIL: <a href="mailto:michael@lordsandkings.co" className="text-gray-900 hover:text-[#E31837] font-semibold">michael@lordsandkings.co</a></span>
           <span>&bull;</span>
           <span>WHATSAPP: <a href="https://wa.me/918072557159" className="text-gray-900 hover:text-[#E31837] font-semibold">+91 80725 57159</a></span>
           <span>&bull;</span>

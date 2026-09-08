@@ -251,29 +251,27 @@ export default function IndustryHorizontalJourney({ onSelectIndustry }: Industry
         <div className="absolute bottom-10 left-12 right-12 z-20 max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
             {industries.map((ind, i) => (
-              <div
-                key={ind.num}
-                className="h-1.5 bg-gray-200 w-10 overflow-hidden relative"
-              >
-                <motion.div
-                  style={{
-                    scaleX: useTransform(
-                      scrollYProgress,
-                      [i / 7, (i + 1) / 7],
-                      [0, 1]
-                    ),
-                  }}
-                  className="h-full bg-[#E31837] origin-left"
-                />
-              </div>
+              <ProgressBarItem key={ind.num} i={i} scrollYProgress={scrollYProgress} />
             ))}
           </div>
 
           <span className="text-[11px] font-mono tracking-widest text-gray-500 uppercase font-semibold">
-            L&amp;K HIRINGSPRO &bull; INDUSTRY COVERAGE
+            LORDS &amp; KINGS GROUP MANPOWER SOLUTIONS &bull; INDUSTRY COVERAGE
           </span>
         </div>
       </div>
     </section>
+  );
+}
+
+function ProgressBarItem({ i, scrollYProgress }: { i: number; scrollYProgress: any }) {
+  const scaleX = useTransform(scrollYProgress, [i / 7, (i + 1) / 7], [0, 1]);
+  return (
+    <div className="h-1.5 bg-gray-200 w-10 overflow-hidden relative">
+      <motion.div
+        style={{ scaleX }}
+        className="h-full bg-[#E31837] origin-left"
+      />
+    </div>
   );
 }

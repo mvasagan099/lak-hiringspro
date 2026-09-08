@@ -39,7 +39,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        display: ['"Clash Display"', 'var(--font-display)', 'system-ui', 'sans-serif'],
+        display: ['"Caacupe One"', 'var(--font-display)', 'system-ui', 'sans-serif'],
+        caacupe: ['"Caacupe One"', 'sans-serif'],
         sans: ['"Inter"', 'var(--font-sans)', 'system-ui', 'sans-serif'],
         mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },

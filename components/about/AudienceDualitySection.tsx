@@ -41,7 +41,7 @@ export default function AudienceDualitySection({
               </h3>
 
               <p className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed mb-10">
-                L&amp;K HiringsPro works around the workforce requirements of businesses rather than forcing businesses into a fixed hiring model. We configure sourcing timelines, skill vetting, and onboarding schedules to match your operational demands.
+                Lords &amp; Kings Group Manpower Solutions works around the workforce requirements of businesses rather than forcing businesses into a fixed hiring model. We configure sourcing timelines, skill vetting, and onboarding schedules to match your operational demands.
               </p>
             </div>
 

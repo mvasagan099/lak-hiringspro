@@ -14,17 +14,18 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'L&K HiringsPro | Workforce & Recruitment — Lords & Kings',
-    template: '%s | L&K HiringsPro — Lords & Kings',
+    default: 'Lords & Kings Group Manpower Solutions | Workforce & Recruitment',
+    template: '%s | Lords & Kings Group Manpower Solutions',
   },
   description:
-    'L&K HiringsPro is a workforce and recruitment brand within the Lords & Kings ecosystem, connecting businesses with people and opportunities.',
+    'Lords & Kings Group Manpower Solutions is a workforce and recruitment brand within the Lords & Kings ecosystem, connecting businesses with people and opportunities.',
   keywords: [
     'recruitment',
     'workforce solutions',
+    'manpower solutions',
     'Lords and Kings',
     'Lords & Kings Group',
-    'L&K HiringsPro',
+    'Lords & Kings Group Manpower Solutions',
     'bulk hiring',
     'skilled workforce',
     'enterprise staffing',
@@ -32,28 +33,32 @@ export const metadata: Metadata = {
     'logistics staffing',
     'manufacturing workforce',
   ],
-  authors: [{ name: 'L&K HiringsPro — A Lords & Kings Enterprise' }],
+  authors: [{ name: 'Lords & Kings Group Manpower Solutions — A Lords & Kings Enterprise' }],
   metadataBase: new URL('https://lkhiringspro.com'),
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
+    icon: [
+      { url: '/favicon.png', type: 'image/png' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico' },
+    ],
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
   manifest: '/site.webmanifest',
   openGraph: {
-    title: 'L&K HiringsPro | Workforce & Recruitment — Lords & Kings',
+    title: 'Lords & Kings Group Manpower Solutions | Workforce & Recruitment',
     description:
-      'L&K HiringsPro is a workforce and recruitment brand within the Lords & Kings ecosystem, connecting businesses with people and opportunities.',
+      'Lords & Kings Group Manpower Solutions is a workforce and recruitment brand within the Lords & Kings ecosystem, connecting businesses with people and opportunities.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'L&K HiringsPro — Lords & Kings',
+    siteName: 'Lords & Kings Group Manpower Solutions',
     url: 'https://lkhiringspro.com',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'L&K HiringsPro | Workforce & Recruitment — Lords & Kings',
+    title: 'Lords & Kings Group Manpower Solutions | Workforce & Recruitment',
     description:
-      'L&K HiringsPro is a workforce and recruitment brand within the Lords & Kings ecosystem, connecting businesses with people and opportunities.',
+      'Lords & Kings Group Manpower Solutions is a workforce and recruitment brand within the Lords & Kings ecosystem, connecting businesses with people and opportunities.',
   },
   robots: {
     index: true,
@@ -69,6 +74,17 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Caacupe+One&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
+      </head>
       <body className="bg-[#ffffff] text-[#111827] font-sans antialiased selection:bg-[#E31837]/15 selection:text-[#111827] relative">
         <GlobalBackground />
         <SmoothScroll>{children}</SmoothScroll>

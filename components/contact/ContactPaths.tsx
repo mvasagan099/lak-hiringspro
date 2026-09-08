@@ -92,68 +92,151 @@ export default function ContactPaths({
           </motion.div>
         </div>
 
-        {/* 3. Direct Communication Option */}
+        {/* 3. Head Office & Direct Communication Channels */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="p-8 sm:p-12 border border-gray-200 bg-white shadow-sm text-center sm:text-left"
+          className="p-8 sm:p-12 lg:p-14 border border-gray-200 bg-white shadow-sm"
         >
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-            <div className="max-w-xl">
-              <span className="text-[11px] font-mono tracking-[0.25em] uppercase text-[#E31837] font-bold mb-2 block">
-                DIRECT CHANNELS
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-display font-extrabold uppercase text-gray-900 tracking-tight">
-                Prefer to talk directly?
-              </h3>
-              <p className="mt-2 text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
-                Connect with our workforce advisory desk via WhatsApp, direct phone call, or email. We respond promptly during business hours.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+            {/* Left Column: Official Head Office block matching exact design */}
+            <div className="lg:col-span-7 space-y-8">
+              <div>
+                <span className="text-[11px] font-mono tracking-[0.25em] uppercase text-[#E31837] font-bold mb-2 block">
+                  CORPORATE HEADQUARTERS
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-display font-extrabold uppercase text-gray-900 tracking-tight">
+                  Head Office
+                </h2>
+              </div>
 
-              <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-gray-500">
-                <div className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-[#E31837]" />
-                  <span>{CONTACT_INFO.hours}</span>
+              <div className="space-y-8 pt-2">
+                {/* Visit Us */}
+                <div className="flex items-start gap-5 sm:gap-6 group">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-[#E31837] flex items-center justify-center shrink-0 text-[#E31837] bg-white group-hover:bg-red-50 transition-colors shadow-sm">
+                    <MapPin className="w-6 h-6 sm:w-7 sm:h-7" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-display font-bold text-gray-900 mb-1.5">
+                      Visit Us
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
+                      328, 2nd floor, Ten Square Mall,<br />
+                      Jawaharlal Nehru Road, Koyambedu,<br />
+                      Chennai, Tamil Nadu - 600107
+                    </p>
+                    <a
+                      href={CONTACT_INFO.address.googleMapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 mt-2.5 text-xs font-mono text-[#E31837] hover:underline uppercase tracking-wider font-semibold"
+                    >
+                      <span>Get Directions on Google Maps</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-[#E31837]" />
-                  <span>{CONTACT_INFO.officeLocation}</span>
+
+                {/* Call Us */}
+                <div className="flex items-start gap-5 sm:gap-6 group">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-[#E31837] flex items-center justify-center shrink-0 text-[#E31837] bg-white group-hover:bg-red-50 transition-colors shadow-sm">
+                    <Phone className="w-6 h-6 sm:w-7 sm:h-7" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-display font-bold text-gray-900 mb-1.5">
+                      Call Us
+                    </h3>
+                    <a
+                      href={`tel:${CONTACT_INFO.phoneRaw}`}
+                      className="text-base sm:text-lg font-medium text-gray-800 hover:text-[#E31837] transition-colors block"
+                    >
+                      {CONTACT_INFO.phone}
+                    </a>
+                  </div>
+                </div>
+
+                {/* Email Us */}
+                <div className="flex items-start gap-5 sm:gap-6 group">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-[#E31837] flex items-center justify-center shrink-0 text-[#E31837] bg-white group-hover:bg-red-50 transition-colors shadow-sm">
+                    <Mail className="w-6 h-6 sm:w-7 sm:h-7" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-display font-bold text-gray-900 mb-1.5">
+                      Email Us
+                    </h3>
+                    <a
+                      href={`mailto:${CONTACT_INFO.email}`}
+                      className="text-base sm:text-lg font-medium text-gray-800 hover:text-[#E31837] transition-colors block break-all"
+                    >
+                      {CONTACT_INFO.email}
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Direct Action Buttons: WhatsApp, Call, Email */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4 justify-start sm:justify-end">
-              {/* WhatsApp */}
-              <a
-                href={CONTACT_INFO.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 border border-emerald-600/30 hover:border-emerald-600 bg-emerald-50 hover:bg-emerald-600 text-emerald-700 hover:text-white text-xs font-mono tracking-widest uppercase transition-all duration-300 group"
-              >
-                <MessageCircle className="w-4 h-4 text-emerald-600 group-hover:text-white transition-colors" />
-                <span>WhatsApp</span>
-              </a>
+            {/* Right Column: Fast Advisory Desk & Direct Action Cards */}
+            <div className="lg:col-span-5 flex flex-col justify-between p-6 sm:p-8 bg-gray-50 border border-gray-200">
+              <div>
+                <span className="text-[11px] font-mono tracking-[0.25em] uppercase text-[#E31837] font-bold mb-2 block">
+                  FAST RESPONSE DESK
+                </span>
+                <h3 className="text-xl sm:text-2xl font-display font-extrabold uppercase text-gray-900 tracking-tight">
+                  Prefer direct messaging?
+                </h3>
+                <p className="mt-2 text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
+                  Connect immediately with our dedicated workforce coordinators for real-time staffing queries, job availability, and enterprise agreements.
+                </p>
 
-              {/* Call */}
-              <a
-                href={`tel:${CONTACT_INFO.phoneRaw}`}
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 border border-gray-300 hover:border-[#E31837] bg-gray-50 hover:bg-white text-gray-900 hover:text-[#E31837] text-xs font-mono tracking-widest uppercase transition-all duration-300 group"
-              >
-                <Phone className="w-4 h-4 text-gray-600 group-hover:text-[#E31837] transition-colors" />
-                <span>Call</span>
-              </a>
+                <div className="mt-6 space-y-3 text-xs font-mono text-gray-600">
+                  <div className="flex items-center gap-2.5">
+                    <Clock className="w-4 h-4 text-[#E31837] shrink-0" />
+                    <span>{CONTACT_INFO.hours}</span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <span className="relative flex h-2.5 w-2.5">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                    </span>
+                    <span className="text-green-700 font-semibold">Priority 24–48h SLA Response</span>
+                  </div>
+                </div>
+              </div>
 
-              {/* Email */}
-              <a
-                href={`mailto:${CONTACT_INFO.email}`}
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 border border-gray-300 hover:border-[#E31837] bg-gray-50 hover:bg-white text-gray-900 hover:text-[#E31837] text-xs font-mono tracking-widest uppercase transition-all duration-300 group"
-              >
-                <Mail className="w-4 h-4 text-gray-600 group-hover:text-[#E31837] transition-colors" />
-                <span>Email</span>
-              </a>
+              {/* Direct Quick Action Buttons */}
+              <div className="mt-8 space-y-3">
+                {/* WhatsApp Direct */}
+                <a
+                  href={CONTACT_INFO.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-3 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-mono tracking-widest uppercase shadow-sm transition-all duration-300 group"
+                >
+                  <MessageCircle className="w-4 h-4 text-white" />
+                  <span>Open WhatsApp Desk</span>
+                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
+
+                {/* Direct Call */}
+                <a
+                  href={`tel:${CONTACT_INFO.phoneRaw}`}
+                  className="w-full inline-flex items-center justify-center gap-3 px-6 py-3.5 border border-gray-300 hover:border-[#E31837] bg-white text-gray-900 hover:text-[#E31837] text-xs font-mono tracking-widest uppercase transition-all duration-300 group"
+                >
+                  <Phone className="w-4 h-4 text-gray-600 group-hover:text-[#E31837] transition-colors" />
+                  <span>Call {CONTACT_INFO.phone}</span>
+                </a>
+
+                {/* Direct Email */}
+                <a
+                  href={`mailto:${CONTACT_INFO.email}`}
+                  className="w-full inline-flex items-center justify-center gap-3 px-6 py-3.5 border border-gray-300 hover:border-[#E31837] bg-white text-gray-900 hover:text-[#E31837] text-xs font-mono tracking-widest uppercase transition-all duration-300 group"
+                >
+                  <Mail className="w-4 h-4 text-gray-600 group-hover:text-[#E31837] transition-colors" />
+                  <span>Email {CONTACT_INFO.email}</span>
+                </a>
+              </div>
             </div>
           </div>
         </motion.div>

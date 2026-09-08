@@ -64,7 +64,7 @@ export default function TrustSection() {
             transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
             className="mt-6 text-base sm:text-xl text-gray-600 max-w-3xl leading-relaxed font-normal"
           >
-            L&amp;K HiringsPro is the specialized workforce solutions division within the Lords &amp; Kings ecosystem.
+            Lords &amp; Kings Group Manpower Solutions is the specialized workforce solutions division within the Lords &amp; Kings ecosystem.
             We eliminate recruitment bottlenecks by connecting expanding enterprises with qualified, dependable talent across key commercial sectors.
           </motion.p>
         </div>

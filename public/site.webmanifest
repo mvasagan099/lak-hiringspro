@@ -1,12 +1,18 @@
 {
-  "name": "L&K HiringsPro",
-  "short_name": "HiringsPro",
-  "description": "L&K HiringsPro connects businesses with workforce and recruitment solutions while helping candidates discover new opportunities.",
+  "name": "Lords & Kings Group Manpower Solutions",
+  "short_name": "Manpower Solutions",
+  "description": "Lords & Kings Group Manpower Solutions connects businesses with workforce and recruitment solutions while helping candidates discover new opportunities.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#04060a",
   "theme_color": "#04060a",
   "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
     {
       "src": "/favicon.svg",
       "sizes": "any",

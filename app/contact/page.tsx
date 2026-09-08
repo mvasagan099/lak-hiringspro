@@ -36,7 +36,7 @@ export default function ContactPage() {
         onOpenCandidateModal={handleOpenCandidateModal}
       />
 
-      {/* 3. Animated Connection Visual (BUSINESS ↓ L&K HIRINGSPRO ↓ CANDIDATE) */}
+      {/* 3. Animated Connection Visual (BUSINESS ↓ LORDS & KINGS GROUP MANPOWER SOLUTIONS ↓ CANDIDATE) */}
       <ContactConnectionVisual />
 
       {/* 4. Global Brand Footer */}
