@@ -28,19 +28,20 @@ const pillars = [
 
 export default function TrustSection() {
   return (
-    <section className="relative py-24 sm:py-32 px-6 sm:px-8 border-b border-gray-200 bg-white">
+    <section className="relative py-14 sm:py-24 lg:py-32 px-5 sm:px-8 border-b border-gray-200 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Large Editorial Statement */}
-        <div className="max-w-4xl">
+        <div className="max-w-4xl mx-auto text-center sm:text-left">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
-            className="flex items-center gap-3 text-xs font-mono tracking-[0.25em] text-[#E31837] font-semibold uppercase mb-6"
+            className="flex items-center justify-center sm:justify-start gap-3 text-xs font-mono tracking-[0.25em] text-[#E31837] font-semibold uppercase mb-5 sm:mb-6"
           >
-            <span className="w-8 h-[2px] bg-[#E31837]" />
+            <span className="w-6 sm:w-8 h-[2px] bg-[#E31837]" />
             <span>INTRODUCTION &bull; PHILOSOPHY</span>
+            <span className="w-6 h-[2px] bg-[#E31837] sm:hidden" />
           </motion.div>
 
           <motion.h2
@@ -62,7 +63,7 @@ export default function TrustSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-6 text-base sm:text-xl text-gray-600 max-w-3xl leading-relaxed font-normal"
+            className="mt-5 sm:mt-6 text-sm sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto sm:mx-0 leading-relaxed font-normal"
           >
             Lords &amp; Kings Group Manpower Solutions is the specialized workforce solutions division within the Lords &amp; Kings ecosystem.
             We eliminate recruitment bottlenecks by connecting expanding enterprises with qualified, dependable talent across key commercial sectors.

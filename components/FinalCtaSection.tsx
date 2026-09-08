@@ -11,7 +11,7 @@ interface FinalCtaSectionProps {
 
 export default function FinalCtaSection({ onOpenHireModal, onOpenContactModal }: FinalCtaSectionProps) {
   return (
-    <section id="contact" className="relative py-28 sm:py-36 px-6 sm:px-8 bg-white overflow-hidden text-center border-t border-gray-200">
+    <section id="contact" className="relative py-16 sm:py-24 lg:py-36 px-5 sm:px-8 bg-white overflow-hidden text-center border-t border-gray-200 scroll-mt-20">
       {/* Subtle Ambient Red Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#E31837]/[0.03] rounded-full blur-[140px] pointer-events-none" />
 
@@ -21,11 +21,11 @@ export default function FinalCtaSection({ onOpenHireModal, onOpenContactModal }:
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="flex items-center justify-center gap-3 text-xs font-mono tracking-[0.25em] text-[#E31837] font-semibold uppercase mb-8"
+          className="flex items-center justify-center gap-3 text-xs font-mono tracking-[0.25em] text-[#E31837] font-semibold uppercase mb-6 sm:mb-8"
         >
-          <span className="w-8 h-[2px] bg-[#E31837]" />
+          <span className="w-6 sm:w-8 h-[2px] bg-[#E31837]" />
           <span>LORDS &amp; KINGS &bull; WORKFORCE OPERATIONS</span>
-          <span className="w-8 h-[2px] bg-[#E31837]" />
+          <span className="w-6 sm:w-8 h-[2px] bg-[#E31837]" />
         </motion.div>
 
         <motion.h2
@@ -33,7 +33,7 @@ export default function FinalCtaSection({ onOpenHireModal, onOpenContactModal }:
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-bold font-display tracking-tight text-gray-900 leading-[1.03] uppercase"
+          className="text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-bold font-display tracking-tight text-gray-900 leading-[1.06] sm:leading-[1.03] uppercase"
         >
           BUILD YOUR TEAM.
           <br />

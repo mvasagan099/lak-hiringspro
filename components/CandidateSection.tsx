@@ -29,14 +29,15 @@ const candidateStandards = [
 
 export default function CandidateSection({ onOpenCandidateModal }: CandidateSectionProps) {
   return (
-    <section id="candidates" className="relative py-24 sm:py-32 px-6 sm:px-8 bg-white border-b border-gray-200">
+    <section id="candidates" className="relative py-14 sm:py-24 lg:py-32 px-5 sm:px-8 bg-white border-b border-gray-200 scroll-mt-20">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Left Column: Heading & CTA */}
-          <div className="lg:col-span-7">
-            <div className="flex items-center gap-3 text-xs font-mono tracking-[0.25em] text-[#E31837] font-semibold uppercase mb-6">
-              <span className="w-8 h-[2px] bg-[#E31837]" />
+          <div className="lg:col-span-7 text-center lg:text-left">
+            <div className="flex items-center justify-center lg:justify-start gap-3 text-xs font-mono tracking-[0.25em] text-[#E31837] font-semibold uppercase mb-5 sm:mb-6">
+              <span className="w-6 sm:w-8 h-[2px] bg-[#E31837]" />
               <span>FOR CANDIDATES &bull; CAREER PATHWAYS</span>
+              <span className="w-6 h-[2px] bg-[#E31837] lg:hidden" />
             </div>
 
             <motion.h2
@@ -44,7 +45,7 @@ export default function CandidateSection({ onOpenCandidateModal }: CandidateSect
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="text-3xl sm:text-5xl md:text-6xl lg:text-[72px] font-bold font-display tracking-tight text-gray-900 leading-[1.02] uppercase"
+              className="text-3xl sm:text-5xl md:text-6xl lg:text-[72px] font-bold font-display tracking-tight text-gray-900 leading-[1.04] uppercase"
             >
               YOUR NEXT
               <br />
@@ -58,7 +59,7 @@ export default function CandidateSection({ onOpenCandidateModal }: CandidateSect
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-6 text-base sm:text-lg text-gray-600 font-normal leading-relaxed max-w-xl"
+              className="mt-5 sm:mt-6 text-sm sm:text-lg text-gray-600 font-normal leading-relaxed max-w-xl mx-auto lg:mx-0"
             >
               Gain direct access to verified commercial roles with dependable enterprise employers across retail, logistics, manufacturing, and technical sectors.
             </motion.p>
@@ -68,11 +69,11 @@ export default function CandidateSection({ onOpenCandidateModal }: CandidateSect
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4"
+              className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
             >
               <button
                 onClick={onOpenCandidateModal}
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#E31837] hover:bg-[#c4122d] text-white text-xs font-semibold tracking-[0.14em] uppercase transition-all shadow-sm active:scale-95"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#E31837] hover:bg-[#c4122d] text-white text-xs font-semibold tracking-[0.14em] uppercase transition-all shadow-sm active:scale-95"
               >
                 <span>Submit Candidate Profile</span>
                 <ArrowUpRight className="w-4 h-4" />

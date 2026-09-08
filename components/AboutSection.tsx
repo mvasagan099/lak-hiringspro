@@ -5,14 +5,15 @@ import { motion } from 'framer-motion';
 
 export default function AboutSection() {
   return (
-    <section id="about" className="relative py-24 sm:py-32 px-6 sm:px-8 bg-white border-b border-gray-200">
+    <section id="about" className="relative py-14 sm:py-24 lg:py-32 px-5 sm:px-8 bg-white border-b border-gray-200 scroll-mt-20">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left Column: Editorial Headline */}
-          <div className="lg:col-span-6">
-            <div className="flex items-center gap-3 text-xs font-mono tracking-[0.25em] text-[#E31837] font-semibold uppercase mb-6">
-              <span className="w-8 h-[2px] bg-[#E31837]" />
+          <div className="lg:col-span-6 text-center lg:text-left">
+            <div className="flex items-center justify-center lg:justify-start gap-3 text-xs font-mono tracking-[0.25em] text-[#E31837] font-semibold uppercase mb-5 sm:mb-6">
+              <span className="w-6 sm:w-8 h-[2px] bg-[#E31837]" />
               <span>ABOUT &bull; ETHOS</span>
+              <span className="w-6 h-[2px] bg-[#E31837] lg:hidden" />
             </div>
 
             <motion.h2
@@ -20,7 +21,7 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="text-3xl sm:text-5xl md:text-6xl lg:text-[72px] font-bold font-display tracking-tight text-gray-900 leading-[1.02] uppercase"
+              className="text-3xl sm:text-5xl md:text-6xl lg:text-[72px] font-bold font-display tracking-tight text-gray-900 leading-[1.04] uppercase"
             >
               MORE THAN
               <br />
@@ -34,7 +35,7 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-10 p-8 bg-[#f8f9fa] border-l-4 border-[#E31837] border-y border-r border-gray-200"
+              className="mt-8 sm:mt-10 p-6 sm:p-8 bg-[#f8f9fa] border-l-4 border-[#E31837] border-y border-r border-gray-200 text-left"
             >
               <div className="text-[10px] font-mono tracking-[0.25em] text-[#E31837] font-bold uppercase mb-2">
                 A LORDS &amp; KINGS ECOSYSTEM BRAND

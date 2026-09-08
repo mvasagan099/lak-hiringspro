@@ -57,20 +57,21 @@ export default function ServicesListSection({ onSelectService }: ServicesListSec
   const [activeService, setActiveService] = useState<number | null>(null);
 
   return (
-    <section className="relative py-24 sm:py-32 px-6 sm:px-8 bg-[#f8f9fa] border-b border-gray-200">
+    <section className="relative py-14 sm:py-24 lg:py-32 px-5 sm:px-8 bg-[#f8f9fa] border-b border-gray-200">
       <div className="max-w-7xl mx-auto">
         {/* Section Eyebrow & Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 sm:mb-18 pb-8 border-b border-gray-200 gap-6">
-          <div>
-            <div className="flex items-center gap-3 text-xs font-mono tracking-[0.25em] text-[#E31837] font-semibold uppercase mb-4">
-              <span className="w-8 h-[2px] bg-[#E31837]" />
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-18 pb-6 sm:pb-8 border-b border-gray-200 gap-6 text-center md:text-left">
+          <div className="mx-auto md:mx-0">
+            <div className="flex items-center justify-center md:justify-start gap-3 text-xs font-mono tracking-[0.25em] text-[#E31837] font-semibold uppercase mb-4">
+              <span className="w-6 sm:w-8 h-[2px] bg-[#E31837]" />
               <span>SERVICES &bull; WORKFORCE CAPABILITIES</span>
+              <span className="w-6 h-[2px] bg-[#E31837] md:hidden" />
             </div>
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold font-display tracking-tight text-gray-900 uppercase">
               SPECIALIZED <span className="text-[#E31837]">RECRUITMENT</span> DIVISIONS.
             </h2>
           </div>
-          <span className="text-xs font-mono tracking-widest text-gray-500 uppercase self-start md:self-end">
+          <span className="text-xs font-mono tracking-widest text-gray-500 uppercase self-center md:self-end">
             06 CORE PILLARS
           </span>
         </div>

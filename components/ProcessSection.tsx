@@ -54,21 +54,22 @@ export default function ProcessSection() {
   return (
     <section
       ref={containerRef}
-      className="relative py-24 sm:py-32 px-6 sm:px-8 bg-white border-b border-gray-200"
+      className="relative py-14 sm:py-24 lg:py-32 px-5 sm:px-8 bg-white border-b border-gray-200"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Eyebrow & Headline */}
-        <div className="max-w-3xl mb-16 sm:mb-20">
-          <div className="flex items-center gap-3 text-xs font-mono tracking-[0.25em] text-[#E31837] font-semibold uppercase mb-4">
-            <span className="w-8 h-[2px] bg-[#E31837]" />
+        <div className="max-w-3xl mx-auto lg:mx-0 text-center lg:text-left mb-12 sm:mb-20">
+          <div className="flex items-center justify-center lg:justify-start gap-3 text-xs font-mono tracking-[0.25em] text-[#E31837] font-semibold uppercase mb-4">
+            <span className="w-6 sm:w-8 h-[2px] bg-[#E31837]" />
             <span>METHODOLOGY &bull; TIMELINE</span>
+            <span className="w-6 h-[2px] bg-[#E31837] lg:hidden" />
           </div>
 
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold font-display tracking-tight text-gray-900 uppercase leading-[1.06]">
             THE RECRUITMENT <span className="text-[#E31837]">JOURNEY.</span>
           </h2>
 
-          <p className="mt-5 text-base sm:text-lg text-gray-600 font-normal leading-relaxed">
+          <p className="mt-4 sm:mt-5 text-sm sm:text-lg text-gray-600 font-normal leading-relaxed">
             A disciplined, 6-stage operational pipeline engineered to eliminate hiring friction, ensure candidate verification, and deliver dependable day-one readiness.
           </p>
         </div>

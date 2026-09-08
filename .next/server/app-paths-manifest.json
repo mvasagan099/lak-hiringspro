@@ -1,8 +1,8 @@
 {
-  "/api/inquiry/route": "app/api/inquiry/route.js",
   "/page": "app/page.js",
-  "/industries/page": "app/industries/page.js",
   "/candidates/page": "app/candidates/page.js",
+  "/employers/page": "app/employers/page.js",
+  "/industries/page": "app/industries/page.js",
   "/contact/page": "app/contact/page.js",
-  "/employers/page": "app/employers/page.js"
+  "/about/page": "app/about/page.js"
 }

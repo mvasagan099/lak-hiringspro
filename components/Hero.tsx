@@ -30,18 +30,19 @@ export default function Hero({ onOpenHireModal, onOpenCandidateModal }: HeroProp
       <HeroBackground />
 
       <div className="relative z-10 max-w-7xl mx-auto w-full">
-        <motion.div style={{ y, opacity }} className="max-w-3xl">
+        <motion.div style={{ y, opacity }} className="max-w-3xl mx-auto text-center sm:text-left">
           {/* 1. Red Eyebrow Indicator matching lordsandkings.co */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="flex items-center gap-3 mb-6"
+            className="flex items-center justify-center sm:justify-start gap-3 mb-5 sm:mb-6"
           >
-            <span className="w-10 h-[2px] bg-[#E31837]" />
+            <span className="w-8 sm:w-10 h-[2px] bg-[#E31837]" />
             <span className="text-xs font-bold font-mono tracking-[0.25em] text-[#E31837] uppercase">
               LORDS &amp; KINGS GROUP
             </span>
+            <span className="w-8 h-[2px] bg-[#E31837] sm:hidden" />
           </motion.div>
 
           {/* 2. Bold High-Impact Headline matching screenshot */}
@@ -49,7 +50,7 @@ export default function Hero({ onOpenHireModal, onOpenCandidateModal }: HeroProp
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-bold tracking-tight text-gray-900 font-display leading-[1.04] uppercase"
+            className="text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-bold tracking-tight text-gray-900 font-display leading-[1.08] sm:leading-[1.04] uppercase text-center sm:text-left"
           >
             Building the
             <br />
@@ -63,7 +64,7 @@ export default function Hero({ onOpenHireModal, onOpenCandidateModal }: HeroProp
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-6 text-base sm:text-lg md:text-xl text-gray-600 font-normal max-w-2xl leading-relaxed"
+            className="mt-5 sm:mt-6 text-sm sm:text-lg md:text-xl text-gray-600 font-normal max-w-2xl mx-auto sm:mx-0 leading-relaxed text-center sm:text-left"
           >
             A diversified workforce division driving operational excellence across Agriculture,
             Logistics, Retail, Manufacturing, and Technology — connecting enterprises with dependable talent.
@@ -74,11 +75,11 @@ export default function Hero({ onOpenHireModal, onOpenCandidateModal }: HeroProp
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto"
+            className="mt-8 flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3.5 sm:gap-4 w-full sm:w-auto"
           >
             <button
               onClick={onOpenHireModal}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#E31837] hover:bg-[#c4122d] text-white text-sm font-semibold tracking-wide transition-all shadow-sm active:scale-95"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#E31837] hover:bg-[#c4122d] text-white text-sm font-semibold tracking-wide transition-all shadow-sm active:scale-95"
             >
               <span>Explore Workforce</span>
               <ArrowUpRight className="w-4 h-4" />
@@ -86,7 +87,7 @@ export default function Hero({ onOpenHireModal, onOpenCandidateModal }: HeroProp
 
             <button
               onClick={onOpenCandidateModal}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border border-gray-900 hover:bg-gray-900 hover:text-white text-gray-900 text-sm font-semibold tracking-wide transition-all active:scale-95"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border border-gray-900 hover:bg-gray-900 hover:text-white text-gray-900 text-sm font-semibold tracking-wide transition-all active:scale-95"
             >
               <span>Candidate Careers</span>
             </button>
@@ -97,7 +98,7 @@ export default function Hero({ onOpenHireModal, onOpenCandidateModal }: HeroProp
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-14 pt-8 border-t border-gray-200 grid grid-cols-3 sm:grid-cols-4 gap-6 max-w-2xl"
+            className="mt-12 sm:mt-14 pt-8 border-t border-gray-200 grid grid-cols-3 sm:grid-cols-4 gap-4 sm:gap-6 max-w-2xl mx-auto sm:mx-0 text-center sm:text-left"
           >
             <div>
               <div className="text-2xl sm:text-3xl font-bold font-display text-gray-900">8+</div>

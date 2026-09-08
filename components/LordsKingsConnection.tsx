@@ -7,7 +7,7 @@ import { ArrowDown, ExternalLink } from 'lucide-react';
 
 export default function LordsKingsConnection() {
   return (
-    <section className="relative py-20 sm:py-24 px-6 sm:px-8 border-t border-b border-gray-200 bg-[#f8f9fa]">
+    <section className="relative py-12 sm:py-20 px-5 sm:px-8 border-t border-b border-gray-200 bg-[#f8f9fa]">
       <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
         {/* Parent Brand Hierarchy Tree */}
         <motion.div
@@ -24,7 +24,7 @@ export default function LordsKingsConnection() {
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 p-2 hover:opacity-90 transition-opacity"
           >
-            <div className="relative h-10 w-auto">
+            <div className="relative h-9 sm:h-10 w-auto">
               <Image
                 src="/lords-and-kings-logo.png"
                 alt="Lords & Kings Group"
@@ -37,17 +37,17 @@ export default function LordsKingsConnection() {
           </a>
 
           {/* Clean Red Vertical Connector */}
-          <div className="my-5 flex flex-col items-center">
-            <div className="w-[2px] h-8 bg-[#E31837]" />
+          <div className="my-4 sm:my-5 flex flex-col items-center">
+            <div className="w-[2px] h-6 sm:h-8 bg-[#E31837]" />
             <ArrowDown className="w-4 h-4 text-[#E31837] -mt-1" />
           </div>
 
           {/* Division Name */}
-          <h2 className="font-display font-bold text-2xl sm:text-3xl tracking-[0.1em] text-gray-900 uppercase">
+          <h2 className="font-display font-bold text-xl sm:text-3xl tracking-[0.08em] sm:tracking-[0.1em] text-gray-900 uppercase">
             LORDS &amp; KINGS GROUP MANPOWER SOLUTIONS
           </h2>
 
-          <span className="mt-1 text-xs font-mono tracking-[0.25em] text-[#E31837] font-semibold uppercase">
+          <span className="mt-1 text-[11px] sm:text-xs font-mono tracking-[0.2em] sm:tracking-[0.25em] text-[#E31837] font-semibold uppercase">
             WORKFORCE &amp; RECRUITMENT DIVISION
           </span>
         </motion.div>

@@ -16,14 +16,15 @@ export default function HeroBackground() {
         }}
       />
 
-      {/* 3. Smooth Architectural Gradient Blend from Left to Right */}
+      {/* 3. Smooth Architectural Gradient Blend (with increased opacity on mobile for centered legibility) */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 hidden sm:block"
         style={{
           background:
             'linear-gradient(105deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 48%, rgba(255,255,255,0.65) 75%, rgba(255,255,255,0.2) 100%)',
         }}
       />
+      <div className="absolute inset-0 sm:hidden bg-white/90 backdrop-blur-[2px]" />
 
       {/* 4. Subtle Bottom White Fade to transition cleanly into next section */}
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
