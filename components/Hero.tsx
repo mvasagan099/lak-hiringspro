@@ -24,13 +24,13 @@ export default function Hero({ onOpenHireModal, onOpenCandidateModal }: HeroProp
     <section
       id="home"
       ref={containerRef}
-      className="relative min-h-screen flex items-center pt-28 sm:pt-36 pb-20 px-6 sm:px-8 lg:px-12 overflow-hidden bg-white"
+      className="relative min-h-screen flex items-center pt-28 sm:pt-36 pb-20 px-6 sm:px-8 overflow-hidden bg-white"
     >
       {/* Architectural Background with modern corridor photo and gradient overlay */}
       <HeroBackground />
 
       <div className="relative z-10 max-w-7xl mx-auto w-full">
-        <motion.div style={{ y, opacity }} className="max-w-3xl mx-auto text-center sm:text-left">
+        <motion.div style={{ y, opacity }} className="max-w-3xl mx-auto sm:mx-0 text-center sm:text-left">
           {/* 1. Red Eyebrow Indicator matching lordsandkings.co */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
