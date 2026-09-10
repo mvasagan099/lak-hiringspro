@@ -126,7 +126,7 @@ export default function InquiryModal({
             <div className="shrink-0 p-4 sm:p-6 pb-3 sm:pb-4 flex items-start justify-between border-b border-gray-100 bg-white">
               <div className="pr-2">
                 <span className="text-[9px] sm:text-[10px] font-mono tracking-[0.2em] sm:tracking-[0.25em] text-[#E31837] uppercase block mb-1 font-bold">
-                  LORDS &amp; KINGS GROUP &bull; MANPOWER SOLUTIONS
+                  LORDS &amp; KINGS MANPOWER SOLUTIONS
                 </span>
                 <h3 id="modal-headline" className="text-lg sm:text-2xl font-bold font-display text-gray-900 uppercase leading-tight">
                   {mode === 'employer' ? 'Request Workforce Deployment' : 'Candidate Intake Profile'}
@@ -182,7 +182,7 @@ export default function InquiryModal({
                     Inquiry Received
                   </h4>
                   <p className="mt-2 text-xs sm:text-sm text-gray-600 max-w-sm">
-                    Thank you, {formData.name || 'Candidate'}. An account specialist from Lords &amp; Kings Group Manpower Solutions will reach out within 24–48 hours.
+                    Thank you, {formData.name || 'Candidate'}. An account specialist from Lords &amp; Kings Manpower Solutions will reach out within 24–48 hours.
                   </p>
                   <div className="mt-6 flex flex-col gap-3 w-full max-w-xs">
                     <a
@@ -335,7 +335,7 @@ export default function InquiryModal({
                   </div>
 
                   <p className="text-center text-[10px] sm:text-[11px] text-gray-500 font-mono pt-1 leading-snug">
-                    Direct submission to Lords &amp; Kings Group Manpower Solutions Operations Desk &bull; Privacy protected
+                    Direct submission to Lords &amp; Kings Manpower Solutions Operations Desk &bull; Privacy protected
                   </p>
                 </form>
               )}

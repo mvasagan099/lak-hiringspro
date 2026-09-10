@@ -25,7 +25,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
       setStage('hiringspro');
     }, 800);
 
-    // Stage 2: "LORDS & KINGS GROUP MANPOWER SOLUTIONS" for 800ms, then finish
+    // Stage 2: "LORDS & KINGS MANPOWER SOLUTIONS" for 800ms, then finish
     const timer2 = setTimeout(() => {
       setStage('done');
       onComplete?.();
@@ -102,7 +102,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
                       WORKFORCE &amp; RECRUITMENT
                     </span>
                     <h1 className="text-lg sm:text-2xl md:text-3xl font-bold tracking-[0.1em] uppercase text-gray-900 font-display text-center max-w-xl">
-                      LORDS &amp; KINGS GROUP MANPOWER SOLUTIONS
+                      LORDS &amp; KINGS MANPOWER SOLUTIONS
                     </h1>
                   </motion.div>
                 )}

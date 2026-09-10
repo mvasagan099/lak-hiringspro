@@ -14,18 +14,18 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Lords & Kings Group Manpower Solutions | Workforce & Recruitment',
-    template: '%s | Lords & Kings Group Manpower Solutions',
+    default: 'Lords & Kings Manpower Solutions | Workforce & Recruitment',
+    template: '%s | Lords & Kings Manpower Solutions',
   },
   description:
-    'Lords & Kings Group Manpower Solutions is a workforce and recruitment brand within the Lords & Kings ecosystem, connecting businesses with people and opportunities.',
+    'Lords & Kings Manpower Solutions is a workforce and recruitment brand within the Lords & Kings ecosystem, connecting businesses with people and opportunities.',
   keywords: [
     'recruitment',
     'workforce solutions',
     'manpower solutions',
     'Lords and Kings',
     'Lords & Kings Group',
-    'Lords & Kings Group Manpower Solutions',
+    'Lords & Kings Manpower Solutions',
     'bulk hiring',
     'skilled workforce',
     'enterprise staffing',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     'logistics staffing',
     'manufacturing workforce',
   ],
-  authors: [{ name: 'Lords & Kings Group Manpower Solutions — A Lords & Kings Enterprise' }],
+  authors: [{ name: 'Lords & Kings Manpower Solutions — A Lords & Kings Enterprise' }],
   metadataBase: new URL('https://lkhiringspro.com'),
   icons: {
     icon: [
@@ -46,19 +46,19 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   openGraph: {
-    title: 'Lords & Kings Group Manpower Solutions | Workforce & Recruitment',
+    title: 'Lords & Kings Manpower Solutions | Workforce & Recruitment',
     description:
-      'Lords & Kings Group Manpower Solutions is a workforce and recruitment brand within the Lords & Kings ecosystem, connecting businesses with people and opportunities.',
+      'Lords & Kings Manpower Solutions is a workforce and recruitment brand within the Lords & Kings ecosystem, connecting businesses with people and opportunities.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Lords & Kings Group Manpower Solutions',
+    siteName: 'Lords & Kings Manpower Solutions',
     url: 'https://lkhiringspro.com',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lords & Kings Group Manpower Solutions | Workforce & Recruitment',
+    title: 'Lords & Kings Manpower Solutions | Workforce & Recruitment',
     description:
-      'Lords & Kings Group Manpower Solutions is a workforce and recruitment brand within the Lords & Kings ecosystem, connecting businesses with people and opportunities.',
+      'Lords & Kings Manpower Solutions is a workforce and recruitment brand within the Lords & Kings ecosystem, connecting businesses with people and opportunities.',
   },
   robots: {
     index: true,

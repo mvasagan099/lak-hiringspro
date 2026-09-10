@@ -55,7 +55,7 @@ export default function AboutHero() {
           transition={{ duration: 0.8, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
           className="mt-6 text-base sm:text-lg md:text-xl text-gray-600 font-normal max-w-2xl leading-relaxed"
         >
-          Lords &amp; Kings Group Manpower Solutions is a workforce and recruitment brand within the Lords &amp; Kings ecosystem, connecting businesses with dependable people and long-term opportunities.
+          Lords &amp; Kings Manpower Solutions is a workforce and recruitment brand within the Lords &amp; Kings ecosystem, connecting businesses with dependable people and long-term opportunities.
         </motion.p>
 
         {/* Scroll Cue */}

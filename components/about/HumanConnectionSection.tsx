@@ -72,7 +72,7 @@ export default function HumanConnectionSection() {
             >
               <HeartHandshake className="w-4 h-4 shrink-0" />
               <span className="text-xs font-mono tracking-[0.16em] uppercase font-bold">
-                LORDS &amp; KINGS GROUP MANPOWER SOLUTIONS &bull; THE BRIDGE
+                LORDS &amp; KINGS MANPOWER SOLUTIONS &bull; THE BRIDGE
               </span>
             </motion.div>
             <div className="w-[2px] h-10 bg-[#E31837]" />

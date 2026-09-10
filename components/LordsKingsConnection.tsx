@@ -44,7 +44,7 @@ export default function LordsKingsConnection() {
 
           {/* Division Name */}
           <h2 className="font-display font-bold text-xl sm:text-3xl tracking-[0.08em] sm:tracking-[0.1em] text-gray-900 uppercase">
-            LORDS &amp; KINGS GROUP MANPOWER SOLUTIONS
+            LORDS &amp; KINGS MANPOWER SOLUTIONS
           </h2>
 
           <span className="mt-1 text-[11px] sm:text-xs font-mono tracking-[0.2em] sm:tracking-[0.25em] text-[#E31837] font-semibold uppercase">
@@ -60,7 +60,7 @@ export default function LordsKingsConnection() {
           transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           className="mt-6 max-w-2xl text-base sm:text-lg text-gray-600 leading-relaxed font-normal"
         >
-          Lords &amp; Kings Group Manpower Solutions operates as the specialized workforce and talent acquisition division of the Lords &amp; Kings Group — deploying dependable personnel across retail, manufacturing, logistics, and technical operations.
+          Lords &amp; Kings Manpower Solutions operates as the specialized workforce and talent acquisition division of the Lords &amp; Kings Group — deploying dependable personnel across retail, manufacturing, logistics, and technical operations.
         </motion.p>
       </div>
     </section>

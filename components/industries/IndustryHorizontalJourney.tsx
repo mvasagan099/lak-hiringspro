@@ -256,7 +256,7 @@ export default function IndustryHorizontalJourney({ onSelectIndustry }: Industry
           </div>
 
           <span className="text-[11px] font-mono tracking-widest text-gray-500 uppercase font-semibold">
-            LORDS &amp; KINGS GROUP MANPOWER SOLUTIONS &bull; INDUSTRY COVERAGE
+            LORDS &amp; KINGS MANPOWER SOLUTIONS &bull; INDUSTRY COVERAGE
           </span>
         </div>
       </div>

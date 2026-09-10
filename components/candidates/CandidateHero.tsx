@@ -39,7 +39,7 @@ export default function CandidateHero({ onOpenCandidateModal }: CandidateHeroPro
           className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-[11px] sm:text-xs font-mono tracking-[0.2em] sm:tracking-[0.25em] text-[#E31837] font-semibold uppercase mb-4 sm:mb-6"
         >
           <span className="w-6 sm:w-8 h-[2px] bg-[#E31837]" />
-          <span>LORDS &amp; KINGS GROUP MANPOWER SOLUTIONS &bull; CANDIDATES</span>
+          <span>LORDS &amp; KINGS MANPOWER SOLUTIONS &bull; CANDIDATES</span>
           <span className="w-6 sm:w-8 h-[2px] bg-[#E31837]" />
         </motion.div>
 
@@ -80,7 +80,7 @@ export default function CandidateHero({ onOpenCandidateModal }: CandidateHeroPro
           </button>
 
           <a
-            href={`https://wa.me/${CONTACT_INFO.phoneRaw.replace('+', '')}?text=Hello%20Lords%20%26%20Kings%20Group%20Manpower%20Solutions,%20I%20am%20looking%20for%20job%20opportunities`}
+            href={`https://wa.me/${CONTACT_INFO.phoneRaw.replace('+', '')}?text=Hello%20Lords%20%26%20Kings%20Manpower%20Solutions,%20I%20am%20looking%20for%20job%20opportunities`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 text-xs font-semibold tracking-[0.14em] uppercase text-gray-900 bg-white border border-gray-900 hover:bg-gray-900 hover:text-white transition-all active:scale-95"

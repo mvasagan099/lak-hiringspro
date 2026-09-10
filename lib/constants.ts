@@ -1,5 +1,5 @@
 /**
- * Centralized Brand and Company Configuration for Lords & Kings Group Manpower Solutions
+ * Centralized Brand and Company Configuration for Lords & Kings Manpower Solutions
  * A workforce and recruitment brand of Lords and Kings.
  *
  * Update these constants to change contact information, URLs,
@@ -7,18 +7,18 @@
  */
 
 export const BRAND = {
-  name: 'Lords & Kings Group Manpower Solutions',
+  name: 'Lords & Kings Manpower Solutions',
   shortName: 'Manpower Solutions',
   parentCompany: 'Lords & Kings Group',
   parentSiteUrl: 'https://lordsandkings.co',
   divisionName: 'Workforce & Recruitment',
-  legalEntity: 'Lords & Kings Group Manpower Solutions (A Lords & Kings Enterprise)',
+  legalEntity: 'Lords & Kings Manpower Solutions (A Lords & Kings Enterprise)',
   headline: 'People are the foundation of every great business.',
   statement: 'The right people create stronger businesses.',
   tagline: 'Connecting businesses with people, and people with opportunity.',
   description:
-    'Lords & Kings Group Manpower Solutions is a workforce and recruitment brand within the Lords & Kings ecosystem, connecting businesses with people and opportunities.',
-  metaTitle: 'Lords & Kings Group Manpower Solutions | Workforce & Recruitment — Lords & Kings',
+    'Lords & Kings Manpower Solutions is a workforce and recruitment brand within the Lords & Kings ecosystem, connecting businesses with people and opportunities.',
+  metaTitle: 'Lords & Kings Manpower Solutions | Workforce & Recruitment — Lords & Kings',
   siteUrl: 'https://lkhiringspro.com',
 } as const;
 
@@ -28,7 +28,7 @@ export const CONTACT_INFO = {
   phone: '+91 89255 13218',
   phoneRaw: '+918925513218',
   whatsappNumber: '+918925513218',
-  whatsappUrl: 'https://wa.me/918925513218?text=Hello%20Lords%20%26%20Kings%20Group%20Manpower%20Solutions,%20I%20would%20like%20to%20inquire%20about%20workforce%20solutions',
+  whatsappUrl: 'https://wa.me/918925513218?text=Hello%20Lords%20%26%20Kings%20Manpower%20Solutions,%20I%20would%20like%20to%20inquire%20about%20workforce%20solutions',
   officeLocation: '328, 2nd floor, Ten Square Mall, Jawaharlal Nehru Road, Koyambedu, Chennai, Tamil Nadu - 600107',
   address: {
     line1: '328, 2nd floor, Ten Square Mall,',

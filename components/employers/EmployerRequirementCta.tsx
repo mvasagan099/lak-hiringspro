@@ -48,7 +48,7 @@ export default function EmployerRequirementCta({
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-6 text-base sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal"
         >
-          Tell us what your business needs and let Lords &amp; Kings Group Manpower Solutions connect you with verified, dependable workforce.
+          Tell us what your business needs and let Lords &amp; Kings Manpower Solutions connect you with verified, dependable workforce.
         </motion.p>
 
         {/* Primary CTA and Secondary Options */}

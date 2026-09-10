@@ -45,7 +45,7 @@ export default function Navbar({ onOpenHireModal }: NavbarProps) {
           <Link
             href="/"
             className="group flex items-center gap-3.5 focus-visible:ring-2 focus-visible:ring-[#E31837] focus-visible:outline-none"
-            aria-label="Lords & Kings Group Manpower Solutions Home"
+            aria-label="Lords & Kings Manpower Solutions Home"
           >
             {/* Lords & Kings Official Red Capsule Logo */}
             <div className="relative h-9 sm:h-10 w-auto shrink-0 transition-transform duration-200 group-hover:scale-[1.02]">

@@ -48,7 +48,7 @@ export default function FinalCtaSection({ onOpenHireModal, onOpenContactModal }:
           transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
           className="mt-6 text-base sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal"
         >
-          Connect with Lords &amp; Kings Group Manpower Solutions today. Share your enterprise requirement or submit your candidate credentials to access verified placements.
+          Connect with Lords &amp; Kings Manpower Solutions today. Share your enterprise requirement or submit your candidate credentials to access verified placements.
         </motion.p>
 
         {/* Buttons */}

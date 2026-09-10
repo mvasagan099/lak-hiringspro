@@ -48,7 +48,7 @@ export default function CandidateCtaBanner({
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-6 text-base sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal"
         >
-          Take the first step and share your profile with Lords &amp; Kings Group Manpower Solutions. Direct connections to dependable enterprise employers.
+          Take the first step and share your profile with Lords &amp; Kings Manpower Solutions. Direct connections to dependable enterprise employers.
         </motion.p>
 
         {/* Dual CTAs */}

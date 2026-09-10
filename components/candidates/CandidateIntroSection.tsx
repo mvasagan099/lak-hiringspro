@@ -60,7 +60,7 @@ export default function CandidateIntroSection() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 text-base sm:text-lg md:text-xl text-gray-600 font-normal leading-relaxed max-w-3xl"
           >
-            Lords &amp; Kings Group Manpower Solutions acts as a direct, professional bridge between job seekers and expanding organizations.
+            Lords &amp; Kings Manpower Solutions acts as a direct, professional bridge between job seekers and expanding organizations.
             We take the time to understand your practical skills, certifications, and shift preferences, then introduce you to verified employers who are actively looking to hire and support dependable talent.
           </motion.p>
         </div>

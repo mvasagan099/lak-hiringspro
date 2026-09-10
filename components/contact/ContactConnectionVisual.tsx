@@ -33,7 +33,7 @@ export default function ContactConnectionVisual() {
           <span className="text-[#E31837]">creates a connection.</span>
         </motion.h2>
 
-        {/* Animated Connecting Hierarchy: BUSINESS ↓ LORDS & KINGS GROUP MANPOWER SOLUTIONS ↓ CANDIDATE */}
+        {/* Animated Connecting Hierarchy: BUSINESS ↓ LORDS & KINGS MANPOWER SOLUTIONS ↓ CANDIDATE */}
         <div className="max-w-xl mx-auto flex flex-col items-center">
           {/* 1. BUSINESS */}
           <motion.div
@@ -65,7 +65,7 @@ export default function ContactConnectionVisual() {
             </div>
           </div>
 
-          {/* 2. LORDS & KINGS GROUP MANPOWER SOLUTIONS */}
+          {/* 2. LORDS & KINGS MANPOWER SOLUTIONS */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -80,7 +80,7 @@ export default function ContactConnectionVisual() {
               </span>
             </div>
             <h4 className="text-xl sm:text-2xl font-display font-extrabold text-gray-900 uppercase tracking-wider">
-              LORDS &amp; KINGS GROUP MANPOWER SOLUTIONS
+              LORDS &amp; KINGS MANPOWER SOLUTIONS
             </h4>
             <p className="text-xs sm:text-sm text-gray-600 mt-2 max-w-sm mx-auto font-normal">
               Our workforce desk reviews, screens, and validates capability against verified client requirements.

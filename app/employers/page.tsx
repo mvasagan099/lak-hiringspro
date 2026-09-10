@@ -52,7 +52,7 @@ export default function EmployersPage() {
       {/* 6. For Different Business Needs (3 Scenarios) */}
       <BusinessScenariosSection onSelectScenario={handleSelectScenario} />
 
-      {/* 7. Why Lords & Kings Group Manpower Solutions (4 Grounded Commitments) */}
+      {/* 7. Why Lords & Kings Manpower Solutions (4 Grounded Commitments) */}
       <WhyHiringsProSection />
 
       {/* 8. Industries Horizontal Reel */}

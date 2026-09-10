@@ -106,7 +106,7 @@ export default function Footer() {
             </div>
 
             <p className="text-xs sm:text-[13px] text-gray-400 leading-relaxed font-normal max-w-sm">
-              Lords &amp; Kings Group Manpower Solutions delivers dependable enterprise personnel, structured shift deployments, and verified talent across core commercial industries.
+              Lords &amp; Kings Manpower Solutions delivers dependable enterprise personnel, structured shift deployments, and verified talent across core commercial industries.
             </p>
 
             <div className="pt-2">
@@ -241,7 +241,7 @@ export default function Footer() {
           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 text-center sm:text-left">
             <span>&copy; {new Date().getFullYear()} Lords &amp; Kings Group. All rights reserved.</span>
             <span className="hidden sm:inline text-gray-600">&bull;</span>
-            <span className="text-[#E31837] font-semibold">Lords &amp; Kings Group Manpower Solutions</span>
+            <span className="text-[#E31837] font-semibold">Lords &amp; Kings Manpower Solutions</span>
           </div>
 
           <button

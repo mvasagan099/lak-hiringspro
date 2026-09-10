@@ -62,7 +62,7 @@ export default function EmployerHero({ onOpenHireModal }: EmployerHeroProps) {
           transition={{ duration: 0.8, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
           className="mt-4 sm:mt-6 text-sm sm:text-lg md:text-xl text-gray-600 font-normal max-w-2xl leading-relaxed"
         >
-          Tell us what your business needs. Lords &amp; Kings Group Manpower Solutions connects you with dependable, pre-verified workforce talent across critical commercial sectors.
+          Tell us what your business needs. Lords &amp; Kings Manpower Solutions connects you with dependable, pre-verified workforce talent across critical commercial sectors.
         </motion.p>
 
         {/* CTAs */}

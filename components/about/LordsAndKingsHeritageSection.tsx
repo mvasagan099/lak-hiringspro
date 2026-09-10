@@ -23,7 +23,7 @@ export default function LordsAndKingsHeritageSection() {
           <span>PARENT BRAND ARCHITECTURE</span>
         </motion.div>
 
-        {/* Minimal Hierarchy: LORDS & KINGS GROUP ↓ LORDS & KINGS GROUP MANPOWER SOLUTIONS */}
+        {/* Minimal Hierarchy: LORDS & KINGS GROUP ↓ LORDS & KINGS MANPOWER SOLUTIONS */}
         <div className="flex flex-col items-center space-y-6 my-6">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -66,7 +66,7 @@ export default function LordsAndKingsHeritageSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-2xl sm:text-3xl md:text-4xl font-display font-bold uppercase tracking-wider text-gray-900 flex flex-wrap justify-center items-center gap-2"
           >
-            <span className="text-[#E31837]">LORDS &amp; KINGS GROUP</span> MANPOWER SOLUTIONS
+            <span className="text-[#E31837]">LORDS &amp; KINGS</span> MANPOWER SOLUTIONS
           </motion.div>
 
           <motion.span
@@ -88,7 +88,7 @@ export default function LordsAndKingsHeritageSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed max-w-xl mx-auto mt-8"
         >
-          Lords &amp; Kings Group Manpower Solutions is an official division of the Lords &amp; Kings Group, bringing executive discipline, operational dependability, and institutional governance to modern workforce recruitment.
+          Lords &amp; Kings Manpower Solutions is an official division of the Lords &amp; Kings Group, bringing executive discipline, operational dependability, and institutional governance to modern workforce recruitment.
         </motion.p>
       </div>
     </section>

@@ -19,7 +19,7 @@ export default function ContactHero() {
           className="inline-flex items-center gap-2 px-4 py-1.5 border border-red-500/20 bg-red-50/50 text-[#E31837] text-[11px] font-mono tracking-[0.25em] uppercase mb-8"
         >
           <MessageSquare className="w-3.5 h-3.5" />
-          <span>CONTACT LORDS &amp; KINGS GROUP MANPOWER SOLUTIONS</span>
+          <span>CONTACT LORDS &amp; KINGS MANPOWER SOLUTIONS</span>
         </motion.div>
 
         {/* Headline */}
