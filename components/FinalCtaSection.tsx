@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, ArrowDown } from 'lucide-react';
+import { CONTACT_INFO } from '@/lib/constants';
 
 interface FinalCtaSectionProps {
   onOpenHireModal: () => void;
@@ -83,9 +84,9 @@ export default function FinalCtaSection({ onOpenHireModal, onOpenContactModal }:
           transition={{ duration: 0.8, delay: 0.45 }}
           className="mt-14 pt-8 border-t border-gray-200 flex flex-wrap items-center justify-center gap-8 text-xs font-mono text-gray-500"
         >
-          <span>EMAIL: <a href="mailto:michael@lordsandkings.co" className="text-gray-900 hover:text-[#E31837] font-semibold">michael@lordsandkings.co</a></span>
+          <span>EMAIL: <a href={`mailto:${CONTACT_INFO.email}`} className="text-gray-900 hover:text-[#E31837] font-semibold">{CONTACT_INFO.email}</a></span>
           <span>&bull;</span>
-          <span>WHATSAPP: <a href="https://wa.me/918072557159" className="text-gray-900 hover:text-[#E31837] font-semibold">+91 80725 57159</a></span>
+          <span>WHATSAPP: <a href={CONTACT_INFO.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-[#E31837] font-semibold">{CONTACT_INFO.phone}</a></span>
           <span>&bull;</span>
           <span>TURNAROUND: <strong className="text-gray-900">24–48 HOURS</strong></span>
         </motion.div>

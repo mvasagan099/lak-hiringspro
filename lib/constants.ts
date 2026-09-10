@@ -23,12 +23,12 @@ export const BRAND = {
 } as const;
 
 export const CONTACT_INFO = {
-  email: 'michael@lordsandkings.co',
-  recruitmentEmail: 'michael@lordsandkings.co',
-  phone: '+91 80725 57159',
-  phoneRaw: '+918072557159',
-  whatsappNumber: '+918072557159',
-  whatsappUrl: 'https://wa.me/918072557159?text=Hello%20Lords%20%26%20Kings%20Group%20Manpower%20Solutions,%20I%20would%20like%20to%20inquire%20about%20workforce%20solutions',
+  email: 'hello@lordsandkingsagro.com',
+  recruitmentEmail: 'hello@lordsandkingsagro.com',
+  phone: '+91 89255 13218',
+  phoneRaw: '+918925513218',
+  whatsappNumber: '+918925513218',
+  whatsappUrl: 'https://wa.me/918925513218?text=Hello%20Lords%20%26%20Kings%20Group%20Manpower%20Solutions,%20I%20would%20like%20to%20inquire%20about%20workforce%20solutions',
   officeLocation: '328, 2nd floor, Ten Square Mall, Jawaharlal Nehru Road, Koyambedu, Chennai, Tamil Nadu - 600107',
   address: {
     line1: '328, 2nd floor, Ten Square Mall,',

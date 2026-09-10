@@ -4,6 +4,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowUpRight, MessageSquare } from 'lucide-react';
 import CandidateHeroBackground from './CandidateHeroBackground';
+import { CONTACT_INFO } from '@/lib/constants';
 
 interface CandidateHeroProps {
   onOpenCandidateModal: () => void;
@@ -79,7 +80,7 @@ export default function CandidateHero({ onOpenCandidateModal }: CandidateHeroPro
           </button>
 
           <a
-            href="https://wa.me/918072557159?text=Hello%20Lords%20%26%20Kings%20Group%20Manpower%20Solutions,%20I%20am%20looking%20for%20job%20opportunities"
+            href={`https://wa.me/${CONTACT_INFO.phoneRaw.replace('+', '')}?text=Hello%20Lords%20%26%20Kings%20Group%20Manpower%20Solutions,%20I%20am%20looking%20for%20job%20opportunities`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 text-xs font-semibold tracking-[0.14em] uppercase text-gray-900 bg-white border border-gray-900 hover:bg-gray-900 hover:text-white transition-all active:scale-95"

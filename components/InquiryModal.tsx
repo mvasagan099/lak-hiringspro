@@ -41,15 +41,24 @@ export default function InquiryModal({
     setSubmitted(false);
   }, [initialMode, preselectedIndustry, isOpen]);
 
-  // Handle ESC key
+  // Handle ESC key and prevent background scroll when open
   useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isOpen) {
         onClose();
       }
     };
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, [isOpen, onClose]);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -88,7 +97,7 @@ export default function InquiryModal({
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 md:p-6 overflow-hidden">
           {/* Backdrop Blur */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -101,78 +110,78 @@ export default function InquiryModal({
 
           {/* Modal Container */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.96, y: 15 }}
+            initial={{ opacity: 0, scale: 0.96, y: 12 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.96, y: 15 }}
+            exit={{ opacity: 0, scale: 0.96, y: 12 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-xl bg-white border border-gray-200 shadow-2xl z-10 overflow-hidden my-8"
+            className="relative w-full max-w-lg lg:max-w-xl bg-white border border-gray-200 shadow-2xl z-10 flex flex-col max-h-[92dvh] sm:max-h-[88dvh] overflow-hidden"
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-headline"
           >
             {/* Top red accent line */}
-            <div className="h-1 bg-[#E31837] w-full" />
+            <div className="h-1 bg-[#E31837] w-full shrink-0" />
 
-            {/* Modal Header */}
-            <div className="p-6 sm:p-8 pb-4 flex items-start justify-between border-b border-gray-100">
-              <div>
-                <span className="text-[10px] font-mono tracking-[0.25em] text-[#E31837] uppercase block mb-1 font-bold">
+            {/* Modal Header (Fixed / Non-scrolling) */}
+            <div className="shrink-0 p-4 sm:p-6 pb-3 sm:pb-4 flex items-start justify-between border-b border-gray-100 bg-white">
+              <div className="pr-2">
+                <span className="text-[9px] sm:text-[10px] font-mono tracking-[0.2em] sm:tracking-[0.25em] text-[#E31837] uppercase block mb-1 font-bold">
                   LORDS &amp; KINGS GROUP &bull; MANPOWER SOLUTIONS
                 </span>
-                <h3 id="modal-headline" className="text-xl sm:text-2xl font-bold font-display text-gray-900 uppercase">
+                <h3 id="modal-headline" className="text-lg sm:text-2xl font-bold font-display text-gray-900 uppercase leading-tight">
                   {mode === 'employer' ? 'Request Workforce Deployment' : 'Candidate Intake Profile'}
                 </h3>
               </div>
               <button
                 onClick={onClose}
-                className="p-1.5 text-gray-400 hover:text-gray-900 border border-gray-200 transition-colors"
+                className="w-8 h-8 sm:w-8 sm:h-8 flex items-center justify-center text-gray-400 hover:text-gray-900 hover:bg-gray-100 border border-gray-200 transition-colors shrink-0"
                 aria-label="Close modal"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
 
-            {/* Mode Switcher Tabs */}
+            {/* Mode Switcher Tabs (Fixed / Non-scrolling) */}
             {!submitted && (
-              <div className="grid grid-cols-2 border-b border-gray-200 bg-gray-50">
+              <div className="shrink-0 grid grid-cols-2 border-b border-gray-200 bg-gray-50">
                 <button
                   type="button"
                   onClick={() => setMode('employer')}
-                  className={`py-3.5 px-4 text-xs font-semibold tracking-wider uppercase transition-colors flex items-center justify-center gap-2 ${
+                  className={`py-3 sm:py-3.5 px-3 sm:px-4 text-[11px] sm:text-xs font-semibold tracking-wider uppercase transition-colors flex items-center justify-center gap-1.5 sm:gap-2 ${
                     mode === 'employer'
                       ? 'bg-white text-[#E31837] border-b-2 border-[#E31837]'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
-                  <Building2 className="w-3.5 h-3.5" />
-                  <span>For Employers</span>
+                  <Building2 className="w-3.5 h-3.5 shrink-0" />
+                  <span className="truncate">For Employers</span>
                 </button>
                 <button
                   type="button"
                   onClick={() => setMode('candidate')}
-                  className={`py-3.5 px-4 text-xs font-semibold tracking-wider uppercase transition-colors flex items-center justify-center gap-2 ${
+                  className={`py-3 sm:py-3.5 px-3 sm:px-4 text-[11px] sm:text-xs font-semibold tracking-wider uppercase transition-colors flex items-center justify-center gap-1.5 sm:gap-2 ${
                     mode === 'candidate'
                       ? 'bg-white text-[#E31837] border-b-2 border-[#E31837]'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
-                  <User className="w-3.5 h-3.5" />
-                  <span>For Candidates</span>
+                  <User className="w-3.5 h-3.5 shrink-0" />
+                  <span className="truncate">For Candidates</span>
                 </button>
               </div>
             )}
 
-            {/* Form Body or Success State */}
-            <div className="p-6 sm:p-8">
+            {/* Form Body or Success State (Scrollable) */}
+            <div className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-7 overscroll-contain">
               {submitted ? (
-                <div className="py-8 text-center flex flex-col items-center">
-                  <div className="w-14 h-14 rounded-full bg-red-50 border border-red-200 flex items-center justify-center text-[#E31837] mb-4">
-                    <CheckCircle2 className="w-8 h-8" />
+                <div className="py-6 sm:py-8 text-center flex flex-col items-center">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-red-50 border border-red-200 flex items-center justify-center text-[#E31837] mb-3 sm:mb-4">
+                    <CheckCircle2 className="w-7 h-7 sm:w-8 sm:h-8" />
                   </div>
-                  <h4 className="text-xl font-bold font-display text-gray-900 uppercase">
+                  <h4 className="text-lg sm:text-xl font-bold font-display text-gray-900 uppercase">
                     Inquiry Received
                   </h4>
-                  <p className="mt-2 text-sm text-gray-600 max-w-sm">
+                  <p className="mt-2 text-xs sm:text-sm text-gray-600 max-w-sm">
                     Thank you, {formData.name || 'Candidate'}. An account specialist from Lords &amp; Kings Group Manpower Solutions will reach out within 24–48 hours.
                   </p>
                   <div className="mt-6 flex flex-col gap-3 w-full max-w-xs">
@@ -180,7 +189,7 @@ export default function InquiryModal({
                       href={CONTACT_INFO.whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 py-3 bg-[#E31837] text-white text-xs font-semibold tracking-wider uppercase hover:bg-[#c4122d] transition-colors"
+                      className="inline-flex items-center justify-center gap-2 py-3 px-4 bg-[#E31837] text-white text-xs font-semibold tracking-wider uppercase hover:bg-[#c4122d] transition-colors"
                     >
                       <MessageSquare className="w-4 h-4" />
                       <span>Instant WhatsApp Desk</span>
@@ -194,10 +203,10 @@ export default function InquiryModal({
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div>
-                      <label className="block text-xs font-mono tracking-wider uppercase text-gray-600 mb-1">
+                      <label className="block text-[11px] sm:text-xs font-mono tracking-wider uppercase text-gray-600 mb-1">
                         Full Name *
                       </label>
                       <input
@@ -206,11 +215,11 @@ export default function InquiryModal({
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="e.g. Rahul Sharma"
-                        className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:border-[#E31837] focus:bg-white transition-colors"
+                        className="w-full px-3 sm:px-3.5 py-2 sm:py-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:border-[#E31837] focus:bg-white transition-colors"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-mono tracking-wider uppercase text-gray-600 mb-1">
+                      <label className="block text-[11px] sm:text-xs font-mono tracking-wider uppercase text-gray-600 mb-1">
                         {mode === 'employer' ? 'Company Name *' : 'Current Location *'}
                       </label>
                       <input
@@ -219,14 +228,14 @@ export default function InquiryModal({
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         placeholder={mode === 'employer' ? 'e.g. Apex Retail Pvt Ltd' : 'e.g. Bangalore / Chennai'}
-                        className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:border-[#E31837] focus:bg-white transition-colors"
+                        className="w-full px-3 sm:px-3.5 py-2 sm:py-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:border-[#E31837] focus:bg-white transition-colors"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div>
-                      <label className="block text-xs font-mono tracking-wider uppercase text-gray-600 mb-1">
+                      <label className="block text-[11px] sm:text-xs font-mono tracking-wider uppercase text-gray-600 mb-1">
                         Work Email *
                       </label>
                       <input
@@ -235,11 +244,11 @@ export default function InquiryModal({
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="contact@company.com"
-                        className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:border-[#E31837] focus:bg-white transition-colors"
+                        className="w-full px-3 sm:px-3.5 py-2 sm:py-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:border-[#E31837] focus:bg-white transition-colors"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-mono tracking-wider uppercase text-gray-600 mb-1">
+                      <label className="block text-[11px] sm:text-xs font-mono tracking-wider uppercase text-gray-600 mb-1">
                         Phone / WhatsApp *
                       </label>
                       <input
@@ -247,21 +256,21 @@ export default function InquiryModal({
                         required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="+91 98765 43210"
-                        className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:border-[#E31837] focus:bg-white transition-colors"
+                        placeholder="+91 89255 13218"
+                        className="w-full px-3 sm:px-3.5 py-2 sm:py-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:border-[#E31837] focus:bg-white transition-colors"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div>
-                      <label className="block text-xs font-mono tracking-wider uppercase text-gray-600 mb-1">
+                      <label className="block text-[11px] sm:text-xs font-mono tracking-wider uppercase text-gray-600 mb-1">
                         Primary Industry
                       </label>
                       <select
                         value={formData.industry}
                         onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
-                        className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:border-[#E31837] focus:bg-white transition-colors"
+                        className="w-full px-3 sm:px-3.5 py-2 sm:py-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:border-[#E31837] focus:bg-white transition-colors"
                       >
                         <option value="Retail">Retail &amp; Store Ops</option>
                         <option value="Logistics">Logistics &amp; Warehousing</option>
@@ -273,7 +282,7 @@ export default function InquiryModal({
                       </select>
                     </div>
                     <div>
-                      <label className="block text-xs font-mono tracking-wider uppercase text-gray-600 mb-1">
+                      <label className="block text-[11px] sm:text-xs font-mono tracking-wider uppercase text-gray-600 mb-1">
                         {mode === 'employer' ? 'Target Headcount' : 'Desired Position'}
                       </label>
                       <input
@@ -281,17 +290,17 @@ export default function InquiryModal({
                         value={formData.headcountOrRole}
                         onChange={(e) => setFormData({ ...formData, headcountOrRole: e.target.value })}
                         placeholder={mode === 'employer' ? 'e.g. 15 Warehouse Leads' : 'e.g. Store Supervisor'}
-                        className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:border-[#E31837] focus:bg-white transition-colors"
+                        className="w-full px-3 sm:px-3.5 py-2 sm:py-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:border-[#E31837] focus:bg-white transition-colors"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-mono tracking-wider uppercase text-gray-600 mb-1">
+                    <label className="block text-[11px] sm:text-xs font-mono tracking-wider uppercase text-gray-600 mb-1">
                       Operational Brief / Notes
                     </label>
                     <textarea
-                      rows={3}
+                      rows={2}
                       value={formData.details}
                       onChange={(e) => setFormData({ ...formData, details: e.target.value })}
                       placeholder={
@@ -299,15 +308,15 @@ export default function InquiryModal({
                           ? 'Specify key operational requirements, timelines, or shift timings...'
                           : 'Mention your years of experience, current employment, and availability...'
                       }
-                      className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:border-[#E31837] focus:bg-white transition-colors resize-none"
+                      className="w-full px-3 sm:px-3.5 py-2 sm:py-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:border-[#E31837] focus:bg-white transition-colors resize-none sm:rows-3"
                     />
                   </div>
 
-                  <div className="pt-3">
+                  <div className="pt-2 sm:pt-3">
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 bg-[#E31837] hover:bg-[#c4122d] disabled:opacity-75 disabled:cursor-not-allowed text-white text-xs font-semibold tracking-[0.15em] uppercase transition-all shadow-sm active:scale-98 flex items-center justify-center gap-2"
+                      className="w-full py-3.5 sm:py-4 bg-[#E31837] hover:bg-[#c4122d] disabled:opacity-75 disabled:cursor-not-allowed text-white text-xs font-semibold tracking-[0.14em] uppercase transition-all shadow-sm active:scale-[0.99] flex items-center justify-center gap-2"
                     >
                       {isSubmitting ? (
                         <>
@@ -317,13 +326,15 @@ export default function InquiryModal({
                       ) : (
                         <>
                           <Send className="w-4 h-4" />
-                          <span>{mode === 'employer' ? 'Submit Enterprise Request' : 'Submit Candidate Registration'}</span>
+                          <span className="truncate">
+                            {mode === 'employer' ? 'Submit Enterprise Request' : 'Submit Candidate Registration'}
+                          </span>
                         </>
                       )}
                     </button>
                   </div>
 
-                  <p className="text-center text-[11px] text-gray-500 font-mono pt-1">
+                  <p className="text-center text-[10px] sm:text-[11px] text-gray-500 font-mono pt-1 leading-snug">
                     Direct submission to Lords &amp; Kings Group Manpower Solutions Operations Desk &bull; Privacy protected
                   </p>
                 </form>
