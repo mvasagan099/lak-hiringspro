@@ -78,13 +78,7 @@ export default function Navbar({ onOpenHireModal }: NavbarProps) {
             aria-label="Primary Navigation"
           >
             {NAVIGATION_LINKS.map((link) => {
-              const isActive =
-                (link.href === '/' && pathname === '/') ||
-                (link.href === '/employers' && (pathname === '/employers' || pathname === '/for-employers')) ||
-                (link.href === '/candidates' && (pathname === '/candidates' || pathname === '/for-candidates')) ||
-                (link.href === '/industries' && pathname === '/industries') ||
-                (link.href === '/about' && pathname === '/about') ||
-                (link.href === '/contact' && pathname === '/contact');
+              const isActive = pathname === link.href;
 
               return (
                 <Link
@@ -149,13 +143,7 @@ export default function Navbar({ onOpenHireModal }: NavbarProps) {
                 </span>
               </div>
               {NAVIGATION_LINKS.map((link) => {
-                const isActive =
-                  (link.href === '/' && pathname === '/') ||
-                  (link.href === '/employers' && (pathname === '/employers' || pathname === '/for-employers')) ||
-                  (link.href === '/candidates' && (pathname === '/candidates' || pathname === '/for-candidates')) ||
-                  (link.href === '/industries' && pathname === '/industries') ||
-                  (link.href === '/about' && pathname === '/about') ||
-                  (link.href === '/contact' && pathname === '/contact');
+                const isActive = pathname === link.href;
 
                 return (
                   <Link

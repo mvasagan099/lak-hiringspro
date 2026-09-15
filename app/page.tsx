@@ -5,7 +5,6 @@ import Preloader from '@/components/Preloader';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import LordsKingsConnection from '@/components/LordsKingsConnection';
-import TrustSection from '@/components/TrustSection';
 import ServicesListSection from '@/components/ServicesListSection';
 import ProcessSection from '@/components/ProcessSection';
 import EmployerSection from '@/components/EmployerSection';
@@ -55,9 +54,6 @@ export default function Home() {
 
       {/* 4. Lords & Kings Group Parent-Brand Connection */}
       <LordsKingsConnection />
-
-      {/* 5. Introduction Statement: THE RIGHT PEOPLE CREATE STRONGER BUSINESSES. */}
-      <TrustSection />
 
       {/* 6. Editorial Services List: 01 to 06 */}
       <ServicesListSection onSelectService={(service) => handleOpenHireModal()} />

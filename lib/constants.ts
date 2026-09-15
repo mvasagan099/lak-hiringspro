@@ -54,9 +54,7 @@ export const EXTERNAL_FORMS = {
 
 export const NAVIGATION_LINKS = [
   { name: 'Home', href: '/' },
-  { name: 'Employers', href: '/employers' },
-  { name: 'Candidates', href: '/candidates' },
-  { name: 'Industries', href: '/industries' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ] as const;
+
