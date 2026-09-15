@@ -19,6 +19,8 @@ export async function POST(request: Request) {
         ? process.env.GOOGLE_SHEET_CANDIDATES_WEBHOOK_URL || process.env.GOOGLE_SHEET_WEBHOOK_URL
         : process.env.GOOGLE_SHEET_EMPLOYERS_WEBHOOK_URL || process.env.GOOGLE_SHEET_WEBHOOK_URL;
 
+    const normalizedIndustry = Array.isArray(industry) ? industry.join(', ') : (industry || 'Not specified');
+
     // If Google Sheet Webhook URL is configured, forward payload
     if (webhookUrl) {
       try {
@@ -34,7 +36,7 @@ export async function POST(request: Request) {
             company,
             email,
             phone,
-            industry,
+            industry: normalizedIndustry,
             headcountOrRole,
             details,
           }),
@@ -50,7 +52,7 @@ export async function POST(request: Request) {
         company,
         email,
         phone,
-        industry,
+        industry: normalizedIndustry,
         headcountOrRole,
         details,
       });
