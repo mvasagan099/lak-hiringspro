@@ -107,7 +107,7 @@ export default function Hero({ onOpenHireModal, onOpenCandidateModal }: HeroProp
               </div>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-bold font-display text-gray-900">4</div>
+              <div className="text-2xl sm:text-3xl font-bold font-display text-gray-900">5</div>
               <div className="text-[10px] sm:text-xs font-semibold tracking-wider text-gray-500 uppercase mt-0.5">
                 DIVISIONS
               </div>
