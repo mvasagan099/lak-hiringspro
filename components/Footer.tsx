@@ -14,14 +14,7 @@ import {
   Building2,
   ArrowUpRight,
 } from 'lucide-react';
-import { CONTACT_INFO, NAVIGATION_LINKS, BRAND } from '@/lib/constants';
-
-const GROUP_DIVISIONS = [
-  { name: 'Lords & Kings Agro', desc: 'Sustainable Agritech & Produce' },
-  { name: 'Lords & Kings Enterprises', desc: 'Commercial Trade & Investments' },
-  { name: 'Lords & Kings Estates', desc: 'Property, Infrastructure & Land' },
-  { name: 'Manpower Solutions', desc: 'Workforce & Talent Acquisition (Active)', isCurrent: true },
-];
+import { CONTACT_INFO, NAVIGATION_LINKS, BRAND, GROUP_DIVISIONS } from '@/lib/constants';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -131,26 +124,36 @@ export default function Footer() {
 
             <ul className="space-y-3 pt-1">
               {GROUP_DIVISIONS.map((div) => (
-                <li key={div.name} className="group">
-                  <div className="flex flex-col">
-                    <span
-                      className={`text-xs tracking-wide uppercase transition-colors ${
-                        div.isCurrent
-                          ? 'text-[#E31837] font-semibold flex items-center gap-1.5'
-                          : 'text-gray-300 group-hover:text-white'
-                      }`}
-                    >
-                      {div.name}
-                      {div.isCurrent && (
-                        <span className="text-[9px] px-1.5 py-0.2 bg-[#E31837]/20 border border-[#E31837]/40 text-[#E31837] font-mono">
-                          ACTIVE
-                        </span>
-                      )}
+                <li key={div.num} className="group">
+                  <a
+                    href={div.url}
+                    target={div.isCurrent ? undefined : '_blank'}
+                    rel={div.isCurrent ? undefined : 'noopener noreferrer'}
+                    className="flex flex-col"
+                  >
+                    <div className="flex items-center justify-between gap-1">
+                      <span
+                        className={`text-xs tracking-wide uppercase transition-colors flex items-center gap-1.5 ${
+                          div.isCurrent
+                            ? 'text-[#E31837] font-semibold'
+                            : 'text-gray-300 group-hover:text-white'
+                        }`}
+                      >
+                        <span className="text-[10px] font-mono text-gray-500">{div.num}.</span>
+                        <span className="truncate">{div.name}</span>
+                        {div.isCurrent ? (
+                          <span className="text-[8px] px-1.5 py-0.5 bg-[#E31837]/20 border border-[#E31837]/40 text-[#E31837] font-mono shrink-0">
+                            5TH DIV · ACTIVE
+                          </span>
+                        ) : (
+                          <ArrowUpRight className="w-3 h-3 text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+                        )}
+                      </span>
+                    </div>
+                    <span className="text-[11px] text-gray-400 font-normal line-clamp-1">
+                      {div.category}
                     </span>
-                    <span className="text-[11px] text-gray-400 font-normal">
-                      {div.desc}
-                    </span>
-                  </div>
+                  </a>
                 </li>
               ))}
             </ul>
